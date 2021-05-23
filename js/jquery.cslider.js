@@ -15,7 +15,7 @@
         current: 0, // index of current slide
         bgincrement: 100, // increment the bg position (parallax effect) when sliding
         autoplay: true, // slideshow on / off
-        interval: 3000 // time between transitions
+        interval: 5000 // time between transitions
     };
 
     $.Slider.prototype = {

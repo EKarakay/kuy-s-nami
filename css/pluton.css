@@ -47,6 +47,7 @@
   /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
 }
 
+.icon-zoom:before { content: url('../images/zoom-in.svg'); } /* '' */
 .icon-plus:before { content: '\e826'; } /* '' */
 .icon-email:before { content: '\e825'; } /* '' */
 .icon-cog:before { content: '\e823'; } /* '' */
