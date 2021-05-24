@@ -199,6 +199,19 @@ Sand mail
             error = true; // change the error state to true
         }
 
+        var tel = $('input#tel').val(); // get the value of the input field
+        var error = false;
+        if (tel == "" || tel == " ") {
+            $('#err-tel').show(500);
+            $('#err-tel').delay(4000);
+            $('#err-tel').animate({
+                height: 'toggle'
+            }, 500, function () {
+                // Animation complete.
+            });
+            error = true; // change the error state to true
+        }
+
         var emailCompare = /^([a-z0-9_.-]+)@([da-z.-]+).([a-z.]{2,6})$/; // Syntax to compare against input
         var email = $('input#email').val().toLowerCase(); // get the value of the input field
         if (email == "" || email == " " || !emailCompare.test(email)) {
@@ -240,6 +253,7 @@ Sand mail
                     if (response.success) {
                         $('#successSend').show();
                         $("#name").val('');
+                        $("#tel").val('');
                         $("#email").val('');
                         $("#comment").val('');
                     } else {

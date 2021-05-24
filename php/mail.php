@@ -9,20 +9,21 @@ if (!empty($_POST)){
   $_POST  = multiDimensionalArrayMap('cleanData', $_POST);
 
   //your email adress 
-  $emailTo ="info@kuy-s-nami.ru"; //"yourmail@yoursite.com";
+  $emailTo ="vitaliy201982@gmail.com"; //"yourmail@yoursite.com";
 
   //from email adress
-  $emailFrom =$_POST["email"]; //"contact@yoursite.com";
+  $emailFrom ="info@kuy-s-nami.ru"; //"contact@yoursite.com";
 
   //email subject
   $emailSubject = "Сообщение с сайта www.kuy-s-nami.ru от заказчика";
 
   $name = $_POST["name"];
+  $tel = $_POST["tel"];
   $email = $_POST["email"];
   $comment = $_POST["comment"];
   if($name == "")
    $data['success'] = false;
- 
+
  if (!preg_match("/^[_\.0-9a-zA-Z-]+@([0-9a-zA-Z][0-9a-zA-Z-]+\.)+[a-zA-Z]{2,6}$/i", $email)) 
    $data['success'] = false;
 
@@ -32,9 +33,10 @@ if (!empty($_POST)){
 
  if($data['success'] == true){
 
-  $message = "NAME: $name<br>
-  EMAIL: $email<br>
-  COMMENT: $comment";
+  $message = "Имя: $name<br>
+  телефон: $tel<br>
+  e-mail: $email<br>
+  Сообщение: $comment";
 
 
   $headers = "MIME-Version: 1.0" . "\r\n"; 
