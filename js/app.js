@@ -139,50 +139,7 @@ jQuery(document).ready(function ($) {
     });
 
     /*
-    Sand newsletter
-    **********************************************************************/
-    $('#subscribe').click(function () {
-        var error = false;
-        var emailCompare = /^[\w]{1}[\w-\.]*@[\w-]+\.[a-z]{2,4}$/i; // Syntax to compare against input
-        var email = $('input#nlmail').val().toLowerCase(); // get the value of the input field
-        if (email == "" || email == " " || !emailCompare.test(email)) {
-            $('#err-subscribe').show(500);
-            $('#err-subscribe').delay(4000);
-            $('#err-subscribe').animate({
-                height: 'toggle'
-            }, 500, function () {
-                // Animation complete.
-            });
-            error = true; // change the error state to true
-        }
-
-        if (error === false) {
-            $.ajax({
-                type: 'POST',
-                url: 'php/newsletter.php',
-
-                data: {
-                    email: $('#nlmail').val()
-                },
-                error: function (request, error) {
-                    alert("An error occurred");
-                },
-                success: function (response) {
-                    if (response == 'OK') {
-                        $('#success-subscribe').show();
-                        $('#nlmail').val('')
-                    } else {
-                        alert("An error occurred");
-                    }
-                }
-            });
-        }
-
-        return false;
-    });
-
-    /*
-Sand mail
+Send mail
 **********************************************************************/
     $("#send-mail").click(function () {
 
@@ -212,7 +169,7 @@ Sand mail
             error = true; // change the error state to true
         }
 
-        var emailCompare = /^([a-z0-9_.-]+)@([da-z.-]+).([a-z.]{2,6})$/; // Syntax to compare against input
+        var emailCompare = /^[\w]{1}[\w-\.]*@[\w-]+\.[a-z]{2,4}$/i; // Syntax to compare against input
         var email = $('input#email').val().toLowerCase(); // get the value of the input field
         if (email == "" || email == " " || !emailCompare.test(email)) {
             $('#err-email').show(500);
