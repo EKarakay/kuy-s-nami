@@ -99,7 +99,7 @@ jQuery(document).ready(function ($) {
     });
 
     /*
-    Function for scroliing to top
+    Function for scrolling to top
     ************************************/
     $('.scrollup').click(function () {
         $("html, body").animate({
@@ -143,7 +143,7 @@ jQuery(document).ready(function ($) {
     **********************************************************************/
     $('#subscribe').click(function () {
         var error = false;
-        var emailCompare = /^([a-z0-9_.-]+)@([0-9a-z.-]+).([a-z.]{2,6})$/; // Syntax to compare against input
+        var emailCompare = /^[\w]{1}[\w-\.]*@[\w-]+\.[a-z]{2,4}$/i; // Syntax to compare against input
         var email = $('input#nlmail').val().toLowerCase(); // get the value of the input field
         if (email == "" || email == " " || !emailCompare.test(email)) {
             $('#err-subscribe').show(500);
