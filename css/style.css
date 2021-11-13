@@ -31,7 +31,6 @@
 body {
     font-family: 'Roboto', sans-serif;
     color: #FFF;
-    line-height: 1.2em;
     font-size: 17px;
     line-height: 20px;
 }
@@ -87,7 +86,6 @@ p {
 
 .navbar .nav>li>a {
     text-transform: uppercase;
-    line-height: auto;
     vertical-align: middle;
     margin: 10px 3px;
     -webkit-box-shadow: none;
@@ -160,7 +158,6 @@ p {
     text-align: center;
 }
 
-/* Use this class if you want ceter element with span* class */
 
 .center {
     float: none !important;
@@ -174,7 +171,7 @@ p {
 }
 
 .highlighted-box h1 {
-    margin: 0px;
+    margin: 0;
 }
 
 .large-text {
@@ -194,7 +191,6 @@ p {
     -webkit-border-radius: 500px;
     -moz-border-radius: 500px;
     border-radius: 500px;
-    -khtml-border-radius: 500px;
     border: 3px solid #fff;
 }
 
@@ -216,16 +212,6 @@ p {
     visibility: visible;
 }
 
-.triangle {
-    margin: 0 auto;
-    text-align: center;
-    width: 0;
-    height: 0;
-    border-top: 30px solid #181A1C;
-    border-left: 585px outset transparent;
-    border-right: 585px outset transparent;
-    position: relative;
-}
 
 /*
 2.1 Animations
@@ -239,7 +225,6 @@ p {
     -webkit-transition: all 250ms ease;
     -moz-transition: all 250ms ease;
     -o-transition: all 250ms ease;
-    -ms-transition: all 250ms ease;
     transition: all 250ms ease;
 }
 
@@ -261,7 +246,6 @@ p {
     background-color: transparent;
     padding: 15px 30px;
     font-size: 17px;
-    line-height: auto;
 }
 
 .button:hover, .button:active {
@@ -314,8 +298,7 @@ p {
     position: absolute;
     top: -100px;
     left: 50%;
-    margin: 0 auto;
-    margin-left: -41px;
+    margin: 0 auto 0 -41px;
     width: 80px;
     height: 80px;
     font-size: 40px;
@@ -330,8 +313,7 @@ p {
     margin-top: -40px;
     -webkit-transition: all 0.3s ease-out;
     -moz-transition: all 0.3s ease-out;
-    -o-transition: all 0.3 s ease-out;
-    -ms-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
     transition: all 0.3s ease-out;
 }
 
@@ -354,7 +336,7 @@ p {
 
 .thumbnail .mask {
     opacity: 0.85;
-    filter: alpha(opacity=85);
+    filter: opacity(85%);
     top: 100%;
     left: 0;
     width: 100%;
@@ -363,14 +345,10 @@ p {
     position: absolute;
     -webkit-transition: all 0.2s ease-out;
     -moz-transition: all 0.2s ease-out;
-    -o-transition: all 0.2 s ease-out;
-    -ms-transition: all 0.2s ease-out;
+    -o-transition: all 0.2s ease-out;
     transition: all 0.2s ease-out;
 }
 
-/* .thumbnail:hover .mask {
-    top: 0;
-} */
 
 /*
 2.4 Socail icons
@@ -386,7 +364,6 @@ p {
 .social li {
     display: inline-block;
     line-height: 32px;
-    font-family: 'Porta';
     font-size: 32px;
     padding: 0 5px;
 }
@@ -437,9 +414,6 @@ p {
     background: #181A1C;
 }
 
-.primary-section .triangle {
-    border-top: 40px solid #be033f;
-}
 
 .primary-section .title {
     border-bottom: 1px solid #FFF;
@@ -469,7 +443,7 @@ p {
 
 .third-section {
     padding-bottom: 70px;
-    background: #181A1C url(../images/brand-bg.png) no-repeat center;
+    background: #181A1C no-repeat center;
     border-top: 6px solid #be033f;
 }
 
@@ -504,7 +478,7 @@ p {
 }
 
 .service p {
-    padding: 0px 50px;
+    padding: 0 50px;
     height: 60px;
 }
 
@@ -630,7 +604,7 @@ p {
 .skills {
     list-style-type: none;
     position: relative;
-    margin: 0px;
+    margin: 0;
 }
 
 .skills li {
@@ -733,8 +707,7 @@ p {
     display: block;
     font-size: 22px;
     text-align: center;
-    margin: 0 auto;
-    margin-top: 30px;
+    margin: 30px auto 0;
     width: 70%;
     line-height: 1.3em;
 }
@@ -763,12 +736,12 @@ p {
     text-transform: uppercase;
     text-align: center;
     color: #be033f;
-    padding: 40px 0px;
+    padding: 40px 0;
     font-size: 36px;
-    margin-top: 0px;
-    -moz-border-radius: 0px;
-    -webkit-border-radius: 10px 10px 0px 0px;
-    border-radius: 10px 10px 0px 0px;
+    margin-top: 0;
+    -moz-border-radius: 0;
+    -webkit-border-radius: 10px 10px 0 0;
+    border-radius: 10px 10px 0 0;
 }
 
 .price-column .list {
@@ -781,7 +754,7 @@ p {
     color: #747C89;
     font-size: 20px;
     border-bottom: 1px solid #747C89;
-    padding: 25px 0px;
+    padding: 25px 0;
 }
 
 .price-column .list li.price {
@@ -893,7 +866,6 @@ p {
     width: 100%;
     height: 500px;
     color: #29383F;
-    position: absolute;
     left: 0;
     top: 0;
     right: 0;
@@ -907,7 +879,6 @@ p {
 .contact .social li {
     line-height: 32px;
     padding: 10px 10px;
-    font-family: 'Porta';
     font-size: 50px;
     transition: margin 0.4s;
     -webkit-transition: margin 0.4s;
@@ -922,15 +893,17 @@ p {
 }
 
 .contact-form {
-    background-color: rgb(255 255 255 / 95%);
     z-index: 110;
     position: relative;
     margin-top: -25px;
     padding: 20px;
 }
 
+.contact-form {
+    background-color: rgba(255,255,255,0.95);
+}
+
 .contact-form h3 {
-    /* color: #fff; */
     padding-bottom: 20px;
 }
 
@@ -1042,8 +1015,8 @@ p {
         padding-right: 20px;
     }
     .navbar-fixed-top, .navbar-fixed-bottom, .navbar-static-top {
-        margin-left: 0px;
-        margin-right: 0px;
+        margin-left: 0;
+        margin-right: 0;
     }
     .nav-collapse {
         clear: both;
@@ -1077,7 +1050,7 @@ p {
 @media (max-width: 767px) {
     .info-mail {
         width: 90%;
-        padding: 15px 0px;
+        padding: 15px 0;
     }
     .project-description {
         padding-left: 20px;

@@ -14,11 +14,6 @@
     transition: background-position 1s ease-out 0.3s;
 }
 
-.da-slider .triangle{
-    clear: none;
-    top:0;
-    z-index:999;
-}
 
 .da-slider .mask {
     position:absolute;
